@@ -1,0 +1,32 @@
+{
+  "version": "0.91",
+  "type": "APLA",
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "item": {
+      "type": "Sequencer",
+      "items": [
+        {
+          "when": "false",
+          "type": "Audio",
+          "description": "wrong guess",
+          "source": "soundbank://soundlibrary/alarms/buzzers/buzzers_02"
+        },
+        {
+          "when": "true",
+          "type": "Audio",
+          "description": "correct guess",
+          "source": "soundbank://soundlibrary/alarms/buzzers/buzzers_02"
+        },
+        {
+          "when": "false",
+          "type": "Audio",
+          "description": "all answers correct",
+          "source": "soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03"
+        }
+      ]
+    }
+  }
+}

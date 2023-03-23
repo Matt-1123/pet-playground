@@ -1,0 +1,222 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pet playground",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetRandomCatFactIntent",
+          "slots": [],
+          "samples": [
+            "tell me about cats",
+            "tell me a cat fact",
+            "a cat fact",
+            "another cat fact",
+            "another cat fact please",
+            "give me a cat fact",
+            "more cat facts",
+            "more cat facts please"
+          ]
+        },
+        {
+          "name": "GetRandomDogFactIntent",
+          "slots": [],
+          "samples": [
+            "tell me a dog fact",
+            "tell me about dogs",
+            "a dog fact",
+            "another dog fact",
+            "another dog fact please",
+            "give me a dog fact",
+            "more dog facts",
+            "more dog facts please"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "what did ya say"
+          ]
+        },
+        {
+          "name": "QuizIntent",
+          "slots": [],
+          "samples": [
+            "start a pet quiz",
+            "start a pet test",
+            "test me on pets",
+            "quiz me on pets",
+            "pet quiz",
+            "pet test",
+            "test",
+            "quiz",
+            "start a test",
+            "test me",
+            "quiz me",
+            "start a quiz"
+          ]
+        },
+        {
+          "name": "QuizGuessIntent",
+          "slots": [
+            {
+              "name": "guess",
+              "type": "guess",
+              "samples": [
+                "i guess {guess}",
+                "{guess} is my guess",
+                "I choose {guess}",
+                "my choice is {guess}",
+                "I think it\u0027s {guess}",
+                "{guess}"
+              ]
+            }
+          ],
+          "samples": [
+            "{guess}"
+          ]
+        },
+        {
+          "name": "VideoIntent",
+          "slots": [],
+          "samples": [
+            "show me a video",
+            "play video",
+            "play a video"
+          ]
+        },
+        {
+          "name": "PetSoundsIntent",
+          "slots": [],
+          "samples": [
+            "play pet sounds",
+            "play a pet sound",
+            "open pet sounds"
+          ]
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dog",
+                "synonyms": [
+                  "canine",
+                  "puppy"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cat",
+                "synonyms": [
+                  "feline",
+                  "kitty",
+                  "kitten"
+                ]
+              }
+            }
+          ],
+          "name": "Pets"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "d"
+              }
+            },
+            {
+              "name": {
+                "value": "c"
+              }
+            },
+            {
+              "name": {
+                "value": "b"
+              }
+            },
+            {
+              "name": {
+                "value": "a"
+              }
+            }
+          ],
+          "name": "guess"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "QuizGuessIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "guess",
+              "type": "guess",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1617265152533.210262747568"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1617265152533.210262747568.1173761352483"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1617265152533.210262747568",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say or press a, b, c, or d."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1617265152533.210262747568.1173761352483",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please choose a, b, c, or d"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "31"
+}

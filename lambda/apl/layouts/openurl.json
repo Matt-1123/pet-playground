@@ -1,0 +1,50 @@
+{
+  "type": "APL",
+  "version": "1.6",
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.3.0"
+    }
+  ],
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "items": [
+      {
+        "type": "Container",
+        "width": "100vw",
+        "height": "100vh",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "items": [
+          {
+            "type": "Container",
+            "width": "40vw",
+            "items": [
+              {
+                "when": "${environment.allowOpenURL}",
+                "type": "AlexaButton",
+                "width": "100%",
+                "buttonText": "Click here to open APL Ninja",
+                "primaryAction": [
+                  {
+                    "type": "OpenURL",
+                    "source": "https://apl.ninja"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "when": "${!environment.allowOpenURL}",
+            "type": "Text",
+            "text": "Cool APL documents are available at https://apl.ninja"
+          }
+        ]
+      }
+    ]
+  }
+}

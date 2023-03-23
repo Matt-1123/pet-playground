@@ -1,0 +1,23 @@
+{
+  "version": "0.91",
+  "type": "APLA",
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "item": {
+      "type": "Sequencer",
+      "items": [{
+          "type": "Speech",
+          "contentType": "SSML",
+          "content": "<speak><amazon:emotion name='excited' intensity='high'>Who's a good boy?</amazon:emotion></speak>"
+        },
+
+        {
+          "type": "Audio",
+          "source": "${payload.dogBark}"
+        }
+      ]
+    }
+  }
+}

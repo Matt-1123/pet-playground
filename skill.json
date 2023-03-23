@@ -1,0 +1,171 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Learn about pets and be quizzed on your pet knowledge!",
+          "examplePhrases": [
+            "Alexa, open Pet Playground",
+            "Alexa, launch Pet playground"
+          ],
+          "keywords": [
+            "pet",
+            "cat",
+            "dog",
+            "facts",
+            "quiz",
+            "trivia"
+          ],
+          "name": "Pet Playground",
+          "description": "Currently with Pet Playground you can ask Alexa for a random cat fact, a random dog fact, take a short multiple-choice quiz on cats and dogs, watch a kitten video, and pet a dog or a cat.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "n/a",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:939504670855:function:9d85cbfc-b1b6-42e3-913f-3502fd2241bd:Release_0"
+        },
+        "interfaces": [
+          {
+            "supportedViewports": [
+              {
+                "minHeight": 540,
+                "mode": "TV",
+                "shape": "RECTANGLE",
+                "maxHeight": 540,
+                "minWidth": 960,
+                "maxWidth": 960
+              },
+              {
+                "minHeight": 100,
+                "mode": "HUB",
+                "shape": "ROUND",
+                "maxHeight": 599,
+                "minWidth": 100,
+                "maxWidth": 599
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 959,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 600,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 1279,
+                "minWidth": 1280,
+                "maxWidth": 1920
+              },
+              {
+                "minHeight": 100,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 599,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 960,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 1279,
+                "minWidth": 1920,
+                "maxWidth": 2560
+              },
+              {
+                "minHeight": 1920,
+                "mode": "HUB",
+                "shape": "RECTANGLE",
+                "maxHeight": 2560,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 320,
+                "mode": "MOBILE",
+                "shape": "RECTANGLE",
+                "maxHeight": 1920,
+                "minWidth": 600,
+                "maxWidth": 959
+              },
+              {
+                "minHeight": 320,
+                "mode": "MOBILE",
+                "shape": "RECTANGLE",
+                "maxHeight": 1920,
+                "minWidth": 960,
+                "maxWidth": 1279
+              },
+              {
+                "minHeight": 320,
+                "mode": "MOBILE",
+                "shape": "RECTANGLE",
+                "maxHeight": 1920,
+                "minWidth": 1280,
+                "maxWidth": 1920
+              }
+            ],
+            "type": "ALEXA_PRESENTATION_APL"
+          }
+        ],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:939504670855:function:9d85cbfc-b1b6-42e3-913f-3502fd2241bd:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:939504670855:function:9d85cbfc-b1b6-42e3-913f-3502fd2241bd:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:939504670855:function:9d85cbfc-b1b6-42e3-913f-3502fd2241bd:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::profile:name:read"
+      },
+      {
+        "name": "alexa::person_id:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://amazon.com"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "shoppingKit": {
+        "isShoppingActionsEnabled": false,
+        "isAmazonAssociatesOnAlexaEnabled": false
+      },
+      "usesPersonalInfo": false
+    }
+  }
+}

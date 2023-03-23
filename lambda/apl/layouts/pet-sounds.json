@@ -1,0 +1,64 @@
+{
+  "type": "APL",
+  "version": "1.8",
+  "description": "This APL document places text on the screen and includes a button that sends the skill a message when selected. The button is a pre-defined responsive component from the alexa-layouts package.",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.5.0"
+    }
+  ],
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "items": [
+      {
+        "type": "Container",
+        "height": "100vh",
+        "width": "100vw",
+        "items": [
+          {
+            "type": "Text",
+            "id": "helloTextComponent",
+            "height": "75%",
+            "text": "You can choose to either have Alexa pet a dog or a cat.",
+            "textAlign": "center",
+            "textAlignVertical": "center",
+            "paddingLeft": "@spacingSmall",
+            "paddingRight": "@spacingSmall",
+            "paddingTop": "@spacingXLarge"
+          },
+          {
+            "type": "AlexaButton",
+            "alignSelf": "center",
+            "id": "petADogBtn",
+            "buttonText": "Pet a Dog",
+            "primaryAction": [
+              {
+                "type": "SendEvent",
+                "arguments": [
+                  "dog button pressed"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "AlexaButton",
+            "alignSelf": "center",
+            "id": "petACatBtn",
+            "buttonText": "Pet a Cat",
+            "primaryAction": [
+              {
+                "type": "SendEvent",
+                "arguments": [
+                  "cat button pressed"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

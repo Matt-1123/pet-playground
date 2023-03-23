@@ -1,0 +1,10 @@
+{
+    "headlineData": {
+        "headerTitle": "Welcome to Random Pet Facts!",
+        "headerSubtitle": "Learn more about your furry friends",
+        "primaryText": "Ask About a Pet",
+        "secondaryText": "Currently supported: Cats and Dogs",
+        "footerHintText": "Try \"Alexa, tell me a cat fact.\"",
+        "headerAttributionImage": "https://d2o906d8ln7ui1.cloudfront.net/images/cheeseskillicon.png"
+    }
+}

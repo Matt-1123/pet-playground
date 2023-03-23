@@ -1,0 +1,23 @@
+{
+  "version": "0.91",
+  "type": "APLA",
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "item": {
+      "type": "Sequencer",
+      "items": [{
+          "type": "Speech",
+          "contentType": "SSML",
+          "content": "<speak><amazon:emotion name='excited' intensity='high'>Here kitty kitty</amazon:emotion></speak>"
+        },
+
+        {
+          "type": "Audio",
+          "source": "soundbank://soundlibrary/animals/amzn_sfx_cat_meow_1x_01"
+        }
+      ]
+    }
+  }
+}
